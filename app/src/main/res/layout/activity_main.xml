@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!--Linear layout for top text views-->
+
+    <LinearLayout
+
+            android:id="@+id/toptextviews"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="8dp"
+            android:paddingStart="20dp"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true">
+            <!-- OVERVIEW text view-->
+            <TextView
+                android:id="@+id/overview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/overview"
+                android:layout_weight="1"/>
+            <!--INGREDIENTS text view-->
+            <TextView
+                android:id="@+id/ingredients"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ingredients"
+                android:layout_weight="1"/>
+            <!--PREPARATION text view-->
+            <TextView
+                android:id="@+id/preparation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/preparation"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+    <!-- Container for recipe details -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+        <!-- Lemon grass image-->
+        <ImageView
+            android:id="@+id/lemonimg"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/thai_lemon_grass_image"
+            android:src="@drawable/lemon_grass_chicken"
+            tools:layout_marginTop="30dp" />
+        <!-- Text view with "Thai Lemongrass Chicken "-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/thai_lemongrass_chicken"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Text view with Recipe details-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="80dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/recipe_by_allrecipes_november_2017" />
+        <!-- TESTING UNDER HERE-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="@android:color/darker_gray" />
+        <!--TESTING ENDS HERE -->
+
+        <!-- Nested Table Layout to be placed under the Image details-->
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:stretchColumns="1">
+
+            <TableRow
+                android:id="@+id/labelrow"
+                android:paddingLeft="10dp">
+                <!-- (1,1)-->
+                <TextView
+                    android:layout_weight="1"
+                    android:text="@string/serves"
+                    android:textColor="@android:color/black"
+                    android:textStyle="normal" />
+                <!-- (1,2)-->
+                <TextView
+                    android:layout_weight="0"
+                    android:gravity="center"
+                    android:padding="0dp"
+                    android:text="@string/ratings"
+                    android:textColor="@android:color/black"
+                    android:textStyle="normal" />
+
+                <!-- (1,3)-->
+                <TextView
+                    android:paddingStart="1dp"
+                    android:paddingEnd="10dp"
+                    android:layout_weight="0"
+                    android:text="@string/difficulty_level"
+                    android:textColor="@android:color/black"
+                    android:textStyle="normal" />
+            </TableRow>
+            <!-- Second table row starts here-->
+            <TableRow
+                android:id="@+id/imagesrow">
+
+                <LinearLayout
+                    android:id="@+id/serverbox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingTop="5dp">
+
+                    <ImageView
+                        android:id="@+id/serverimage"
+                        android:layout_width="20dp"
+                        android:layout_height="40dp"
+                        android:layout_centerInParent="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/man_icon"/>
+
+                    <ImageView
+                        android:id="@+id/serverimage2"
+                        android:layout_width="20dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_toStartOf="@+id/serverimage"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/man_icon"/>
+
+                    <ImageView
+                        android:id="@+id/serverimage3"
+                        android:layout_width="20dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/serverimage"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/man_icon"/>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ratingbox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/ratingimage1"
+                        android:layout_width="20dp"
+                        android:layout_height="35dp"
+                        android:layout_centerInParent="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/star_icon"
+                        android:padding="5dp"/>
+
+                    <ImageView
+                        android:id="@+id/ratingimage2"
+                        android:layout_width="20dp"
+                        android:layout_height="35dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_toStartOf="@+id/ratingimage1"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/star_icon"
+                        android:padding="5dp"/>
+
+                    <ImageView
+                        android:id="@+id/ratingimage3"
+                        android:layout_width="20dp"
+                        android:layout_height="35dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/ratingimage1"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/star_icon"
+                        android:padding="5dp"/>
+                </RelativeLayout>
+
+                <RelativeLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/moderate"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"
+                        android:paddingRight="20dp"
+                        android:paddingTop="10dp"/>
+                </RelativeLayout>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/lastrowimages">
+                <LinearLayout
+                    android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/clock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/timer5"
+                    android:paddingTop="10dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/_45_mins"
+                        android:paddingTop="15dp"
+                        android:textColor="@android:color/black"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:paddingStart="35dp"
+                    android:paddingEnd="10dp">
+
+                    <ImageView
+                        android:id="@+id/heartbeatimage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/heart_beat" />
+
+                    <TextView
+                        android:id="@+id/textView20"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/_160_cal"
+                        android:paddingTop="10dp"
+                        android:textColor="@android:color/black"/>
+
+                </LinearLayout>
+
+            </TableRow>
+
+        </TableLayout>
+    </LinearLayout>
+    <!-- Bottom Container with details such as SERVES , RATINGS etc-->
+</RelativeLayout>
+

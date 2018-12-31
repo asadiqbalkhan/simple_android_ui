@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Recipe Details</string>
+    <string name="ingredients">INGREDIENTS</string>
+    <string name="preparation">PREPARATION</string>
+    <string name="overview">OVERVIEW</string>
+    <string name="thai_lemon_grass_image">Thai lemon grass image</string>
+    <string name="thai_lemongrass_chicken">Thai Lemongrass Chicken</string>
+    <string name="recipe_by_allrecipes_november_2017">RECIPE BY ALLRECIPES | NOVEMBER 2017</string>
+    <string name="serves">SERVES:</string>
+    <string name="ratings">RATINGS:</string>
+    <string name="difficulty_level">DIFFICULTY LEVEL</string>
+    <string name="textview">TextView</string>
+    <string name="server_image">server image</string>
+    <string name="_45_mins">45 MINS</string>
+    <string name="moderate">Moderate</string>
+    <string name="_160_cal">160 cal</string>
+</resources>
